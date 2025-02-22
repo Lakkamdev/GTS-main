@@ -3,11 +3,12 @@ import "./App.css";
 import About from "./components/About";
 import Services from "./components/Services";
 import Contact from "./components/Contact";
-import Home from "./components/Home";
+import HomePage from "./components/Home";
 import Navbar from "./components/Navbar";
 import Login from "./layouts/Login";
 import Register from "./layouts/Register";
 import MissionVission from "./components/MissionVission";
+import Loader from "./components/loader";
 // import Partner from "./components/Partner";
 import Footer from "./components/Footer";
 // import Form from "./components/Form";
@@ -20,14 +21,15 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <>
-   
+           <Loader/>
+
       <Routes>
         <Route
           path="/"
           element={
             <>
               <Navbar />
-              <Home />
+              <HomePage />
               <About/>
               <Services />
               <MissionVission/>
@@ -44,7 +46,7 @@ function App() {
           element={
             <>
               <Navbar />
-              <Home />
+              <HomePage />
               <About/>
               <Services />
               <MissionVission/>

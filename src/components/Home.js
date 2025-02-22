@@ -1,52 +1,56 @@
 import React from "react";
-import { ReactTyped } from "react-typed";
-import { motion } from "framer-motion";
 import "./Home.css";
 
 const Home = () => {
   return (
     <div className="home-container">
-      {/* Animated Content Box */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="content-box"
-      >
-        <h1 className="title">
-          Welcome to{" "}
-          <span className="typed-text">
-            <ReactTyped
-              strings={["Gollamudi Technology and Software"]}
-              typeSpeed={80}
-              loop={true}
-              backSpeed={40}
-            />
-          </span>
+      <div className="home-content">
+        <h1 className="gradient-text">
+          Welcome to Gollamudi Technology and Software
         </h1>
-
-        <p className="description">
-          At <span className="highlight">GTS</span>, we transform ideas into reality.
-          Our expertise lies in building world-class <span className="highlight">web</span> and{" "}
-          <span className="highlight">mobile applications</span> tailored to meet your business goals.
-          Whether it's designing intuitive websites or developing powerful software solutions,
-          we deliver <span className="bold">innovation that drives success.</span>
+        <p>
+          At GTS, we transform ideas into reality. Our expertise lies in building world-class web and mobile applications tailored to meet your business goals. Whether it's designing intuitive websites or developing powerful software solutions, we deliver innovation that drives success.
         </p>
-
-        <p className="description">
-          Are you ready to <span className="highlight">kickstart your career?</span> Join our team
-          and become part of a dynamic environment that values <span className="bold">creativity, growth, and excellence.</span>
-          At GTS, fresh talent is nurtured, and <span className="bold">every idea matters.</span>
+        <p>
+          Are you ready to kickstart your career? Join our team and become part of a dynamic environment that values creativity, growth, and excellence. At GTS, fresh talent is nurtured, and every idea matters.
         </p>
+      </div>
 
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="cta-button"
-        >
-          Learn More
-        </motion.button>
-      </motion.div>
+      {/* Image Carousel Section */}
+      <div className="carousel">
+        <div className="carousel-card">
+          <img
+            src="https://osc.com.fj/wp-content/uploads/2024/05/Unveiling-Modern-Trends-in-Technology.jpeg"
+            alt="Technology Trends"
+          />
+          <div className="card-content">
+            <h3>Modern Tech Trends</h3>
+            <p>Stay ahead with cutting-edge innovations.</p>
+          </div>
+        </div>
+
+        <div className="carousel-card">
+          <img
+            src="https://www.netsolutions.com/wp-content/uploads/2023/03/The-Future-of-Software-Development-in-2024-and-Beyond.webp"
+            alt="Software Development"
+          />
+          <div className="card-content">
+            <h3>Software Development</h3>
+            <p>Build powerful software solutions with GTS.</p>
+          </div>
+        </div>
+
+        <div className="carousel-card">
+          <img
+            src="https://i0.wp.com/ranksol.com/wp-content/uploads/2023/08/future_of_web_design.jpeg?fit=830%2C500&ssl=1"
+            alt="Future of Web Design"
+          />
+          <div className="card-content">
+            <h3>Web Design Evolution</h3>
+            <p>Creating visually stunning and user-friendly interfaces.</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
